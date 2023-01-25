@@ -1,44 +1,52 @@
-body{
+body {
     background-color: black;
     color: white;
 }
-.wrapper{
+
+.wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap:3px;
+    gap: 3px;
     margin: auto;
     margin-top: 10%;
     width: 500px;
-    height:500px;
+    height: 500px;
 }
-.box{
+
+.box {
     margin: auto;
     padding: 0;
     width: 250px;
     height: 250px;
 }
 
-.red{
+.red {
     border-top-left-radius: 100%;
     background-color: rgb(255, 51, 0);
 }
 
-.yellow{
+.yellow {
     border-top-right-radius: 100%;
     background-color: yellow;
 }
 
-.green{
+.green {
     border-bottom-left-radius: 100%;
     background-color: green;
 }
 
-.blue{
+.blue {
     border-bottom-right-radius: 100%;
     background-color: blue;
 }
 
-.score{
+.score {
+    top: 0;
     color: white;
+    font-size: 50px;
+}
+
+.title {
+    right: 0;
 }
