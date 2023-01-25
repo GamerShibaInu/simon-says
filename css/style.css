@@ -5,12 +5,29 @@ body{
 .wrapper{
     background-color: red;
     margin: auto;
+    margin-top: 10%;
     width: 500px;
     height:500px;
 }
 .box{
     margin: auto;
-    background-color: yellow;
+    padding: 0;
     width: 10%;
     height: 10%;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
 }
