@@ -5,8 +5,8 @@ body{
 .wrapper{
     background-color: red;
     margin: auto;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height:500px;
 }
 .box{
     margin: auto;
