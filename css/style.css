@@ -2,7 +2,12 @@ body{
     background-color: black;
     color: white;
 }
-
+.wrapper{
+    background-color: red;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
 .box{
     margin: auto;
     background-color: yellow;
