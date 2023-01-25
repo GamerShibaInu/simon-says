@@ -44,3 +44,21 @@ function checkPlayerInput() {
     }
 }
 
+    // Next level function
+    function nextLevel() {
+        // Add a random color to the botColor array
+        let randomColor = colorDivs[Math.floor(Math.random() * colorDivs.length)].classList[1];
+        botColor.push(randomColor);
+        // Highlight the bot's color sequence
+        for (let i = 0; i < botColor.length; i++) {
+        setTimeout(function () {
+        document.querySelector("." + botColor[i]).style.backgroundColor = "light" + botColor[i];
+        setTimeout(function () {
+        document.querySelector("." + botColor[i]).style.backgroundColor = botColor[i];
+        }, 500);
+        }, i * 1000);
+        }
+        }
+        
+        // Game start
+        nextLevel();
