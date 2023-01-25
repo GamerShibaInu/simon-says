@@ -23,7 +23,7 @@ body {
 
 .red {
     border-top-left-radius: 100%;
-    background-color: rgb(255, 51, 0);
+    background-color: red;
 }
 
 .yellow {
