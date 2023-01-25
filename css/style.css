@@ -38,3 +38,7 @@ body{
     border-bottom-right-radius: 100%;
     background-color: blue;
 }
+
+.score{
+    color: white;
+}
