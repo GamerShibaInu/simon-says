@@ -50,3 +50,23 @@ function generateBotColor() {
       }, 1000);
     }
   }
+
+// Compare the botColor and plrColor arrays
+function checkPlayerInput() {
+    for (let i = 0; i < botColor.length; i++) {
+      if (botColor[i] !== plrColor[i]) {
+        console.log("Incorrect input, game over!");
+        resetGame();
+        return;
+      }
+    }
+    if (plrColor.length === botColor.length) {
+      score++;
+      level++;
+      console.log("Correct input, score: " + score + ", level: " + level);
+      plrColor = [];
+      document.querySelector(".score").innerHTML = "score: " + score;
+      setTimeout(nextLevel, 1000);
+    }
+  }
+  
