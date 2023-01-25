@@ -52,7 +52,7 @@ function checkPlayerInput() {
         // Highlight the bot's color sequence
         for (let i = 0; i < botColor.length; i++) {
         setTimeout(function () {
-        document.querySelector("." + botColor[i]).style.backgroundColor = "light" + botColor[i];
+        document.querySelector("." + botColor[i]).style.backgroundColor = "dark" + botColor[i];
         setTimeout(function () {
         document.querySelector("." + botColor[i]).style.backgroundColor = botColor[i];
         }, 500);
