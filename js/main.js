@@ -60,9 +60,9 @@ function nextLevel() {
     // highlight the bot's color sequence
     for (let i = 0; i < botColor.length; i++) {
         setTimeout(function () {
-            document.querySelector("." + botColor[i]).style.backgroundColor = "dark" + botColor[i];
+            document.querySelector("." + botColor[i]).classList.add("dark");
             setTimeout(function () {
-                document.querySelector("." + botColor[i]).style.backgroundColor = botColor[i];
+                document.querySelector("." + botColor[i]).classList.remove("dark");
             }, 500);
         }, i * 1000);
     }

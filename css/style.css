@@ -73,3 +73,7 @@ body {
     margin-top: 40px;
     text-align: center;
 }
+
+.dark{
+    filter: brightness(0.4);
+}
