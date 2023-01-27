@@ -75,7 +75,7 @@ function darken(button, delay) {
         button.classList.add("dark");
         setTimeout(function () {
             button.classList.remove("dark");
-        }, 500);
+        }, 250);
     }, delay);
 }
 

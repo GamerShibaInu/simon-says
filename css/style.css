@@ -6,15 +6,20 @@ body {
 }
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 3px;
+
     margin: auto;
     margin-top: 10%;
     width: 500px;
     height: 500px;
 }
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3px;
+}
+
 
 .box {
     margin: auto;
@@ -53,7 +58,7 @@ body {
 }
 
 .title {
-    position:relative;
+    position: relative;
     font-size: 90px;
     margin-bottom: 0%;
     padding: 0%;
@@ -63,17 +68,46 @@ body {
 
 .high-score {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0;
     font-size: 30px;
-    margin-bottom: 0%;
-    padding: 0%;
     margin-top: 40px;
     text-align: center;
 }
 
-.dark{
+.dark {
     filter: brightness(0.4);
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 60px;
+    }
+
+    .score {
+        font-size: 30px;
+    }
+
+    .high-score {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+
+    .wrapper {
+        margin: auto;
+        margin-top: 30%;
+        width: 350px;
+        height: 350px;
+    }
+
+    .box {
+        margin: auto;
+        height: 175px;
+        width: 175px;
+    }
+
+    .board {
+        width: 175px;
+        height: 175px;
+    }
 }
