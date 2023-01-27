@@ -13,7 +13,7 @@ highScoreText.textContent = "high score: " + vHighScore
 const colorDivs = document.querySelectorAll(".color");
 colorDivs.forEach(function (colorDiv) {
     colorDiv.addEventListener("click", function () {
-        let color = colorDiv.classList[1];
+        let color = colorDiv;
         playerInputColor(color);
     });
 });
@@ -22,6 +22,8 @@ colorDivs.forEach(function (colorDiv) {
 function playerInputColor(color) {
     plrColor.push(color);
     checkPlayerInput();
+    darken(color, 0);
+
 }
 
 // compare the botColor and plrColor arrays
@@ -51,22 +53,31 @@ function checkPlayerInput() {
         highScorePoints = 0 + score
         localStorage.setItem("highScore", score);
     }
-}   
+}
 // next level function
 function nextLevel() {
     // add a random color to the botColor array
-    let randomColor = colorDivs[Math.floor(Math.random() * colorDivs.length)].classList[1];
+
+    let randomColor = colorDivs[Math.floor(Math.random() * colorDivs.length)];
+
     botColor.push(randomColor);
+
     // highlight the bot's color sequence
     for (let i = 0; i < botColor.length; i++) {
-        setTimeout(function () {
-            document.querySelector("." + botColor[i]).classList.add("dark");
-            setTimeout(function () {
-                document.querySelector("." + botColor[i]).classList.remove("dark");
-            }, 500);
-        }, i * 1000);
+        const button = botColor[i]
+        darken(button, i * 1000);
+        console.log(button)
     }
 }
 
-// Game start
+function darken(button, delay) {
+    setTimeout(function () {
+        button.classList.add("dark");
+        setTimeout(function () {
+            button.classList.remove("dark");
+        }, 500);
+    }, delay);
+}
+
+// Game start   
 nextLevel();
